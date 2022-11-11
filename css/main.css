@@ -334,7 +334,7 @@ body {
   margin-left: 50px;
 }
 
-.menu .link {
+.menu .menu__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -345,11 +345,10 @@ body {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu .link:hover, .menu .link:focus {
+.menu .menu__link:hover, .menu .menu__link:focus {
   color: var(--accent);
 }
-
-.menu .link.current {
+.menu .menu__link.current {
   color: var(--accent);
 }
 
@@ -391,11 +390,7 @@ body {
   position: relative;
   display: block;
 }
-.menu__link:hover::after {
-  transform: scaleX(1);
-}
-
-.link.menu::after {
+.menu__link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -407,6 +402,9 @@ body {
   color: var(--accent);
   transform: scaleX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu__link:hover::after {
+  transform: scaleX(1);
 }
 
 .hero {
